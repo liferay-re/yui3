@@ -65,6 +65,13 @@ var Dt = {
 		A: function (d, l) { return l.A[d.getDay()]; },
 		b: function (d, l) { return l.b[d.getMonth()]; },
 		B: function (d, l) { return l.B[d.getMonth()]; },
+		O: function (d, l) { 
+				if (typeof variable !== 'undefined') {
+					return l.O[d.getMonth()]; 
+				} else {
+					return l.B[d.getMonth()]; 
+				}
+			},
 		C: function (d) { return xPad(parseInt(d.getFullYear()/100, 10), 0); },
 		d: ["getDate", "0"],
 		e: ["getDate", " "],
