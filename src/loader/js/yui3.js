@@ -525,6 +525,12 @@ Y.mix(YUI.Env[Y.version].modules, {
         "skinnable": true
     },
     "calendarnavigator": {
+        "lang": [
+            "en",
+            "es",
+            "es-AR",
+            "eu-ES"
+        ],
         "requires": [
             "plugin",
             "classnamemanager",
@@ -2990,4 +2996,4 @@ Y.mix(YUI.Env[Y.version].modules, {
         ]
     }
 });
-YUI.Env[Y.version].md5 = 'f20377d5ab6d37137f73ea79d6eb476d';
+YUI.Env[Y.version].md5 = '95eb05a1b097773b5af03e0680e7dda4';

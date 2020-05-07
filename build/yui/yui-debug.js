@@ -202,6 +202,9 @@ available.
             if (hasWin) {
                 remove(doc, 'DOMContentLoaded', handleReady);
             }
+            if (doc && doc.body && YUI.Env.cssStampEl && (!doc.body.contains(YUI.Env.cssStampEl))) {
+                doc.body.appendChild(YUI.Env.cssStampEl);
+            }
         },
         handleLoad = function() {
             YUI.Env.windowLoaded = true;
@@ -541,7 +544,7 @@ proto = {
             mods = YUI.Env.mods,
             extendedCore = Y.config.extendedCore || [],
             extras = Y.config.core || [].concat(YUI.Env.core).concat(extendedCore); //Clone it..
-   
+
         for (i = 0; i < extras.length; i++) {
             if (mods[extras[i]]) {
                 core.push(extras[i]);
@@ -5336,6 +5339,7 @@ Transaction.prototype = {
                 nodeType = 'style';
             } else {
                 nodeType = 'link';
+                delete req.attributes['charset'];
             }
 
             node = req.node = this._createNode(nodeType, req.attributes,
@@ -9868,6 +9872,12 @@ Y.mix(YUI.Env[Y.version].modules, {
         "skinnable": true
     },
     "calendarnavigator": {
+        "lang": [
+            "en",
+            "es",
+            "es-AR",
+            "eu-ES"
+        ],
         "requires": [
             "plugin",
             "classnamemanager",
@@ -12333,7 +12343,7 @@ Y.mix(YUI.Env[Y.version].modules, {
         ]
     }
 });
-YUI.Env[Y.version].md5 = 'f20377d5ab6d37137f73ea79d6eb476d';
+YUI.Env[Y.version].md5 = '95eb05a1b097773b5af03e0680e7dda4';
 
 
 }, '@VERSION@', {"requires": ["loader-base"]});

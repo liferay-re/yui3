@@ -549,19 +549,6 @@ input[type="reset"],
     /* 2 */
 }
 
-/* ==========================================================================
-   Tables
-   ========================================================================== */
-
-/**
- * Remove most spacing between table cells.
- */
-
-.yui3-normalized table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
 /*csslint important:false*/
 
 /* ==========================================================================

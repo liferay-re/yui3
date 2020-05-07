@@ -4,7 +4,7 @@ YUI Core Change History
 3.18.1
 ------
 
-* No changes.
+* [AUI-3187][]: Account for cssStampEl DOM placement to better follow HTML spec
 
 3.18.0
 ------

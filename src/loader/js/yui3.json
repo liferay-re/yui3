@@ -493,6 +493,12 @@
         "skinnable": true
     },
     "calendarnavigator": {
+        "lang": [
+            "en",
+            "es",
+            "es-AR",
+            "eu-ES"
+        ],
         "requires": [
             "plugin",
             "classnamemanager",

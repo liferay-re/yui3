@@ -645,11 +645,34 @@ YUI.add('attribute-core', function (Y, NAME) {
                 }
 
                 if (path) {
-                   val = O.setValue(Y.clone(currVal), path, val);
+                    var copyVal = [currVal].reduce(
+                        function(retVal, currVal) {
+                            Object.keys(currVal).forEach(
+                                function(item) {
+                                    retVal[item] = currVal[item];
+                                }
+                            );
+                        return retVal;
+                        },
+                        {}
+                    );
 
-                   if (val === undefined) {
-                       allowSet = false;
-                   }
+                    var pathNode = copyVal;
+                    var leafIdx = path.length - 1;
+
+                    for (var i = 0; i < leafIdx && pathNode; i++) {
+                        pathNode = pathNode[path[i]];
+                    }
+
+                    if (pathNode) {
+                        delete pathNode[path[leafIdx]];
+                    }
+
+                    val = O.setValue(Y.clone(copyVal), path, val);
+
+                    if (val === undefined) {
+                        allowSet = false;
+                    }
                 }
 
                 if (allowSet) {

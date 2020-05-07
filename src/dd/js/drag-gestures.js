@@ -27,8 +27,7 @@
         });
 
         node.on('gesturemoveend', Y.bind(this._handleMouseUp, this), { standAlone: true });
-        node.on('dragstart', Y.bind(this._fixDragStart, this));
-
+        node.on(['dragstart', 'touchmove'], Y.bind(this._fixDragStart, this));
     };
 
     var _unprep = Y.DD.Drag.prototype._unprep;

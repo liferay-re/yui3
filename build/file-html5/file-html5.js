@@ -19,17 +19,7 @@ YUI.add('file-html5', function (Y, NAME) {
 
     var FileHTML5 = function(o) {
 
-        var file = null;
-
-        if (FileHTML5.isValidFile(o)) {
-            file = o;
-        }
-        else if (FileHTML5.isValidFile(o.file)) {
-            file = o.file;
-        }
-        else {
-            file = false;
-        }
+        var file = o;
 
         FileHTML5.superclass.constructor.apply(this, arguments);
 

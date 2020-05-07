@@ -1714,15 +1714,13 @@ ChartBase.prototype = {
                     }
                 }, this));
             }
-            else
-            {
-                Y.delegate("mouseenter", Y.bind(this._markerEventDispatcher, this), cb, markerClassName);
-                Y.delegate("mousedown", Y.bind(this._markerEventDispatcher, this), cb, markerClassName);
-                Y.delegate("mouseup", Y.bind(this._markerEventDispatcher, this), cb, markerClassName);
-                Y.delegate("mouseleave", Y.bind(this._markerEventDispatcher, this), cb, markerClassName);
-                Y.delegate("click", Y.bind(this._markerEventDispatcher, this), cb, markerClassName);
-                Y.delegate("mousemove", Y.bind(this._positionTooltip, this), cb, markerClassName);
-            }
+
+            Y.delegate("mouseenter", Y.bind(this._markerEventDispatcher, this), cb, markerClassName);
+            Y.delegate("mousedown", Y.bind(this._markerEventDispatcher, this), cb, markerClassName);
+            Y.delegate("mouseup", Y.bind(this._markerEventDispatcher, this), cb, markerClassName);
+            Y.delegate("mouseleave", Y.bind(this._markerEventDispatcher, this), cb, markerClassName);
+            Y.delegate("click", Y.bind(this._markerEventDispatcher, this), cb, markerClassName);
+            Y.delegate("mousemove", Y.bind(this._positionTooltip, this), cb, markerClassName);
         }
         else if(interactionType === "planar")
         {
