@@ -67,6 +67,13 @@ var Dt = {
         A: function (d, l) { return l.A[d.getDay()]; },
         b: function (d, l) { return l.b[d.getMonth()]; },
         B: function (d, l) { return l.B[d.getMonth()]; },
+		O: function (d, l) {
+				if (typeof l.O !== 'undefined') {
+					return l.O[d.getMonth()];
+				} else {
+					return l.B[d.getMonth()];
+				}
+			},
         C: function (d) { return xPad(parseInt(d.getFullYear()/100, 10), 0); },
         d: ["getDate", "0"],
         e: ["getDate", " "],
@@ -213,6 +220,7 @@ var Dt = {
      *  <dt>%m</dt> <dd>month as a decimal number (range 01 to 12)</dd>
      *  <dt>%M</dt> <dd>minute as a decimal number</dd>
      *  <dt>%n</dt> <dd>newline character</dd>
+	 *	<dt>%O</dt> <dd>specially for Russian - full month name in nominative case</dd>
      *  <dt>%p</dt> <dd>either "AM" or "PM" according to the given time value, or the corresponding strings for the current locale</dd>
      *  <dt>%P</dt> <dd>like %p, but lower case</dd>
      *  <dt>%r</dt> <dd>time in a.m. and p.m. notation equal to %I:%M:%S %p</dd>
@@ -287,7 +295,7 @@ var Dt = {
         }
 
         // Now replace formats (do not run in a loop otherwise %%a will be replace with the value of %a)
-        var str = format.replace(/%([aAbBCdeEgGHIjklmMpPsSuUVwWyYzZ%])/g, replace_formats);
+		var str = format.replace(/%([aAbBCdeEgGHIjklmMOpPsSuUVwWyYzZ%])/g, replace_formats);
 
         replace_aggs = replace_formats = undefined;
 

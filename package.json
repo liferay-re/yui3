@@ -3,16 +3,19 @@
     "version": "3.18.1",
     "description": "YUI 3 Source",
     "author": "Dav Glass <davglass@gmail.com>",
-    "bugs": { "url" : "https://github.com/yui/yui3/issues" },
+    "bugs": {
+        "url": "https://github.com/yui/yui3/issues"
+    },
     "engines": {
-        "node" : ">=0.8.0"
+        "node": ">=0.8.0"
     },
     "directories": {
-        "lib" : "."
+        "lib": "."
     },
     "main": "./index.js",
     "dependencies": {
-        "request": "~2.40.0"
+        "request": "~2.40.0",
+        "uglify-js": "^3.9.2"
     },
     "devDependencies": {
         "yogi": "~0.1.0",
@@ -30,14 +33,14 @@
         "postinstall": "grunt build",
         "test": "grunt test"
     },
-    "licenses":[
+    "licenses": [
         {
-            "type" : "BSD",
-            "url" : "http://yuilibrary.com/license/"
+            "type": "BSD",
+            "url": "http://yuilibrary.com/license/"
         }
     ],
     "repository": {
-        "type":"git",
-        "url":"http://github.com/yui/yui3.git"
+        "type": "git",
+        "url": "http://github.com/yui/yui3.git"
     }
 }

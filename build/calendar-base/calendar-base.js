@@ -1153,7 +1153,7 @@ Y.CalendarBase = Y.extend( CalendarBase, Y.Widget, {
 
         // Populate the calendar pane tabindex
         partials.calendar_pane_tabindex = this.get("tabIndex");
-        partials.pane_arialabel = ydate.format(baseDate, { format: "%B %Y" });
+        partials.pane_arialabel = ydate.format(baseDate, { format: "%O %Y" });
 
 
         // Generate final output by substituting class names.
@@ -1191,7 +1191,7 @@ Y.CalendarBase = Y.extend( CalendarBase, Y.Widget, {
 
         // Hide the pane before making DOM changes to speed them up
         pane.setStyle("visibility", "hidden");
-        pane.setAttribute("aria-label", ydate.format(newDate, {format:"%B %Y"}));
+        pane.setAttribute("aria-label", ydate.format(newDate, {format:"%O %Y"}));
 
         // Go through all columns, and flip their visibility setting based on whether they are within the unmasked range.
         for (column = 0; column <= 12; column++) {
@@ -1624,7 +1624,7 @@ Y.CalendarBase = Y.extend( CalendarBase, Y.Widget, {
          * @type String | Function
          */
         headerRenderer: {
-            value: "%B %Y"
+            value: "%O %Y"
         },
 
         /**
