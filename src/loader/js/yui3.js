@@ -510,6 +510,8 @@ Y.mix(YUI.Env[Y.version].modules, {
             "nl",
             "pt-BR",
             "ru",
+            "kk",
+            "kk-KZ",
             "zh-Hans",
             "zh-Hans-CN",
             "zh-Hant",
