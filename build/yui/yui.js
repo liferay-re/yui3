@@ -10109,6 +10109,8 @@ Y.mix(YUI.Env[Y.version].modules, {
             "it-IT",
             "ja",
             "ja-JP",
+            "kk",
+            "kk-KZ",
             "ko",
             "ko-KR",
             "ms",

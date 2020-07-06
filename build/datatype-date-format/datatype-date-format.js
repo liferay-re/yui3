@@ -361,6 +361,8 @@ Y.DataType.Date = Y.Date;
         "it-IT",
         "ja",
         "ja-JP",
+        "kk",
+        "kk-KZ",
         "ko",
         "ko-KR",
         "ms",
