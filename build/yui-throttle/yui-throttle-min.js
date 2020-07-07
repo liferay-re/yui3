@@ -1,3 +1,3 @@
-YUI.add("yui-throttle",function(t,n){
+YUI.add("yui-throttle",function(e,t){
 /*! Based on work by Simon Willison: http://gist.github.com/292562 */
-t.throttle=function(n,i){if(-1===(i=i||(t.config.throttleTime||150)))return function(){n.apply(this,arguments)};var r=t.Lang.now();return function(){var o=t.Lang.now();o-r>i&&(r=o,n.apply(this,arguments))}}},"@VERSION@",{requires:["yui-base"]});
+;e.throttle=function(t,n){n=n?n:e.config.throttleTime||150;if(n===-1)return function(){t.apply(this,arguments)};var r=e.Lang.now();return function(){var i=e.Lang.now();i-r>n&&(r=i,t.apply(this,arguments))}}},"@VERSION@",{requires:["yui-base"]});
