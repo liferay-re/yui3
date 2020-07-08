@@ -510,6 +510,8 @@ Y.mix(YUI.Env[Y.version].modules, {
             "nl",
             "pt-BR",
             "ru",
+            "kk",
+            "kk-KZ",
             "zh-Hans",
             "zh-Hans-CN",
             "zh-Hant",
@@ -1070,6 +1072,8 @@ Y.mix(YUI.Env[Y.version].modules, {
             "it-IT",
             "ja",
             "ja-JP",
+            "kk",
+            "kk-KZ",
             "ko",
             "ko-KR",
             "ms",
@@ -2996,4 +3000,4 @@ Y.mix(YUI.Env[Y.version].modules, {
         ]
     }
 });
-YUI.Env[Y.version].md5 = '95eb05a1b097773b5af03e0680e7dda4';
+YUI.Env[Y.version].md5 = 'ad72318d370a110794fc84c55bcb0cc3';

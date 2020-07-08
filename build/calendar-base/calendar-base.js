@@ -1712,6 +1712,8 @@ Y.CalendarBase = Y.extend( CalendarBase, Y.Widget, {
         "nl",
         "pt-BR",
         "ru",
+        "kk",
+        "kk-KZ",
         "zh-Hans",
         "zh-Hans-CN",
         "zh-Hant",
